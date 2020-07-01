@@ -251,6 +251,16 @@ h5 {
   overflow: hidden;
   margin: 2rem;
   margin-left: 4rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+@media screen and (max-width: 899px) {
+  .header > .img-container {
+    width: 8rem;
+    height: 8rem;
+    margin-right: 1rem;
+  }
 }
 
 .header .me-container {
@@ -273,6 +283,18 @@ h5 {
 .header .me-container h5 {
   font-size: 1.6rem;
   font-weight: normal;
+}
+
+@media screen and (max-width: 899px) {
+  .header .me-container h1 {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .header .me-container h1 {
+    font-size: 2.6rem;
+  }
 }
 
 .header .github-icon {
