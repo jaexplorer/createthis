@@ -13,6 +13,17 @@
     cursor: pointer;
     animation: scale-in 0.7s cubic-bezier(0.6, 0.01, 0, 1.38) forwards;
     transform: scale(0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      object-position: center;
+      object-fit: contain;
+      width: 6rem;
+      height: 6rem;
+      filter: brightness(0) invert(1);
+    }
 
     &:nth-child(2) {
       animation-delay: 0.2s;
@@ -37,5 +48,49 @@
   100% {
     // opacity: 1;
     transform: scale(1);
+  }
+}
+
+.project-container {
+  width: 100vw;
+  height: 100vh;
+  background: #1a1a1a;
+  position: fixed;
+  padding: 1rem;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.4, 0.01, 0, 1);
+
+  & > img {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 2.5rem;
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+  &.inactive {
+    opacity: 0;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  .project-wrapper {
+    width: 100%;
+    height: 100%;
+    background: #e5e5e5;
+    border: 2px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 90%;
+      max-width: 1500px;
+    }
   }
 }

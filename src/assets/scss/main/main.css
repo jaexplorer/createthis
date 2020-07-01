@@ -526,6 +526,26 @@ h5 {
           animation: scale-in 0.7s cubic-bezier(0.6, 0.01, 0, 1.38) forwards;
   -webkit-transform: scale(0);
           transform: scale(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects-container .dot img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 6rem;
+  height: 6rem;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 .projects-container .dot:nth-child(2) {
@@ -568,5 +588,56 @@ h5 {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+.project-container {
+  width: 100vw;
+  height: 100vh;
+  background: #1a1a1a;
+  position: fixed;
+  padding: 1rem;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.8s cubic-bezier(0.4, 0.01, 0, 1);
+  transition: all 0.8s cubic-bezier(0.4, 0.01, 0, 1);
+}
+
+.project-container > img {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  width: 2.5rem;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.project-container.inactive {
+  opacity: 0;
+}
+
+.project-container.active {
+  opacity: 1;
+}
+
+.project-container .project-wrapper {
+  width: 100%;
+  height: 100%;
+  background: #e5e5e5;
+  border: 2px solid #1a1a1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-container .project-wrapper img {
+  width: 90%;
+  max-width: 1500px;
 }
 /*# sourceMappingURL=main.css.map */

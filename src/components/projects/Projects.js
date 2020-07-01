@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Dot from "./Dot";
+import Project from "./Project";
 
 export default class Projects extends Component {
   constructor() {
@@ -8,8 +9,16 @@ export default class Projects extends Component {
       random: t => Math.random() * t,
       binRandom: f => Math.random() < f,
       myArray: [],
+      featuredArray: ["foodifox", "movingMindz", "stemblr", "pikcha"],
+      selectedProject: "",
     };
     this.container = React.createRef();
+  }
+
+  changeProject(project) {
+    this.setState({
+      selectedProject: project,
+    });
   }
 
   draw() {
@@ -51,13 +60,13 @@ export default class Projects extends Component {
       // Check if outside container
       let shouldRedraw = false;
       if (
-        dot.p.x + 190 > this.container.current.getBoundingClientRect().width ||
-        dot.p.x < -10
+        dot.p.x + 185 > this.container.current.getBoundingClientRect().width ||
+        dot.p.x < -15
       )
         shouldRedraw = true;
       if (
-        dot.p.y + 190 > this.container.current.getBoundingClientRect().height ||
-        dot.p.y < -10
+        dot.p.y + 185 > this.container.current.getBoundingClientRect().height ||
+        dot.p.y < -15
       )
         shouldRedraw = true;
 
@@ -83,9 +92,10 @@ export default class Projects extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        myArray: new Array(5).fill().map((p, index) => {
+        myArray: new Array(4).fill().map((p, index) => {
           return {
             id: index,
+            type: this.state.featuredArray[index],
             p: {
               x: this.state.random(
                 this.container.current.getBoundingClientRect().width - 400
@@ -113,8 +123,18 @@ export default class Projects extends Component {
     return (
       <div ref={this.container} className="projects-container">
         {this.state.myArray.map((dot, index) => (
-          <Dot key={index} x={dot.p.x} y={dot.p.y} />
+          <Dot
+            key={index}
+            x={dot.p.x}
+            y={dot.p.y}
+            type={dot.type}
+            changeProject={type => this.changeProject(type)}
+          />
         ))}
+        <Project
+          project={this.state.selectedProject}
+          changeProject={type => this.changeProject(type)}
+        />
       </div>
     );
   }
