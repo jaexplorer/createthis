@@ -595,7 +595,7 @@ h5 {
   height: 100vh;
   background: #1a1a1a;
   position: fixed;
-  padding: 1rem;
+  padding: 1.5rem;
   left: 0;
   top: 0;
   pointer-events: none;
@@ -624,7 +624,6 @@ h5 {
   width: 100%;
   height: 100%;
   background: #e5e5e5;
-  border: 2px solid #1a1a1a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
