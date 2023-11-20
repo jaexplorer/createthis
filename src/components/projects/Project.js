@@ -5,6 +5,8 @@ import movingMindz from "../../assets/images/page-02.png";
 import stemblr from "../../assets/images/page-03.png";
 import pikcha from "../../assets/images/page-04.png";
 import sorted from "../../assets/images/page-05.png";
+import hello from "../../assets/images/page-06.png";
+import forkit from "../../assets/images/page-07.png";
 
 
 const Project = ({ project, changeProject }) => {
@@ -19,6 +21,10 @@ const Project = ({ project, changeProject }) => {
       return pikcha;
     } else if (project === 'sorted') {
       return sorted;
+    } else if (project === 'hello') {
+      return hello;
+    } else if (project === 'forkit') {
+      return forkit;
     } else return null;
   };
 

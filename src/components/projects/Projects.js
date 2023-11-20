@@ -9,7 +9,7 @@ export default class Projects extends Component {
       random: t => Math.random() * t,
       binRandom: f => Math.random() < f,
       myArray: [],
-      featuredArray: ["foodifox", "movingMindz", "stemblr", "pikcha", "sorted"],
+      featuredArray: ["foodifox", "movingMindz", "stemblr", "pikcha", "sorted", 'hello', 'forkit'],
       selectedProject: "",
     };
     this.container = React.createRef();
@@ -92,7 +92,7 @@ export default class Projects extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        myArray: new Array(4).fill().map((p, index) => {
+        myArray: new Array(7).fill().map((p, index) => {
           return {
             id: index,
             type: this.state.featuredArray[index],
