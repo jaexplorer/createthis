@@ -4,6 +4,8 @@ import foodifox from "../../assets/images/page-01.png";
 import movingMindz from "../../assets/images/page-02.png";
 import stemblr from "../../assets/images/page-03.png";
 import pikcha from "../../assets/images/page-04.png";
+import sorted from "../../assets/images/page-05.png";
+
 
 const Project = ({ project, changeProject }) => {
   const image = () => {
@@ -15,6 +17,8 @@ const Project = ({ project, changeProject }) => {
       return stemblr;
     } else if (project === "pikcha") {
       return pikcha;
+    } else if (project === 'sorted') {
+      return sorted;
     } else return null;
   };
 

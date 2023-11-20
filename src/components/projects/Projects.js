@@ -9,7 +9,7 @@ export default class Projects extends Component {
       random: t => Math.random() * t,
       binRandom: f => Math.random() < f,
       myArray: [],
-      featuredArray: ["foodifox", "movingMindz", "stemblr", "pikcha"],
+      featuredArray: ["foodifox", "movingMindz", "stemblr", "pikcha", "sorted"],
       selectedProject: "",
     };
     this.container = React.createRef();

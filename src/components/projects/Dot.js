@@ -3,6 +3,7 @@ import foodifox from "../../assets/images/foodifox.png";
 import movingMindz from "../../assets/images/movingMindz.png";
 import stemblr from "../../assets/images/stemblr.png";
 import pikcha from "../../assets/images/pikcha.png";
+import sorted from "../../assets/images/sorted.png";
 
 const Dot = ({ x, y, type, changeProject }) => {
   const image = () => {
@@ -14,6 +15,8 @@ const Dot = ({ x, y, type, changeProject }) => {
       return stemblr;
     } else if (type === "pikcha") {
       return pikcha;
+    } else if (type === 'sorted') {
+      return sorted;
     }
   };
 
